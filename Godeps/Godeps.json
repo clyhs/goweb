@@ -12,9 +12,32 @@
 			"Rev": "10f801ebc38b33738c9d17d50860f484a0988ff5"
 		},
 		{
+			"ImportPath": "github.com/Unknwon/goconfig",
+			"Rev": "87a46d97951ee1ea20ed3b24c25646a79e87ba5d"
+		},
+		{
 			"ImportPath": "github.com/codegangsta/cli",
 			"Comment": "v1.19.1-28-g8ba6f23",
 			"Rev": "8ba6f23b6e36d03666a14bd9421f5e3efcb59aca"
+		},
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "v1.3-6-g9dee4ca",
+			"Rev": "9dee4ca50b83acdf57a35fb9e6fb4be640afa2f3"
+		},
+		{
+			"ImportPath": "github.com/go-xorm/builder",
+			"Rev": "c6e604e9c7b7461715091e14ad0c242ec44c26e4"
+		},
+		{
+			"ImportPath": "github.com/go-xorm/core",
+			"Comment": "v0.5.6-9-ge8409d7",
+			"Rev": "e8409d73255791843585964791443dbad877058c"
+		},
+		{
+			"ImportPath": "github.com/go-xorm/xorm",
+			"Comment": "v0.6.2-5-g15f11df",
+			"Rev": "15f11df2af01fe6fcf7e12df4bafc69a7eea5122"
 		},
 		{
 			"ImportPath": "github.com/gorilla/context",
@@ -22,9 +45,17 @@
 			"Rev": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
 		},
 		{
-			"ImportPath": "github.com/urfave/negroni",
-			"Comment": "v0.2.0-104-gc0db5fe",
-			"Rev": "c0db5feaa33826cd5117930c8f4ee5c0f565eec6"
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.3.0-5-g599cba5",
+			"Rev": "599cba5e7b6137d46ddf58fb1765f5d928e69604"
+		},
+		{
+			"ImportPath": "github.com/mailgun/oxy/forward",
+			"Rev": "12aa65630360a8ab1827975bd46491a358094cd9"
+		},
+		{
+			"ImportPath": "github.com/vulcand/oxy/utils",
+			"Rev": "12aa65630360a8ab1827975bd46491a358094cd9"
 		},
 		{
 			"ImportPath": "golang.org/x/sys/unix",
