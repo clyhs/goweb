@@ -34,7 +34,7 @@ func main() {
 				cli.StringFlag{
 					Name:  "listen, l",
 					Usage: "listen address",
-					Value: ":8080",
+					Value: ":8070",
 				},
 			},
 		},

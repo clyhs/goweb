@@ -46,7 +46,7 @@ func (a *Api) Run() error {
 
 	apiRouter := mux.NewRouter()
 	apiRouter.HandleFunc("/module/hello", a.Hello).Methods("GET")
-	apiRouter.HandleFunc("/module/user", a.user).Methods("GET")
+	apiRouter.HandleFunc("/module/user", a.User).Methods("GET")
 	globalMux.Handle("/module/", apiRouter)
 
 	globalMux.Handle("/", http.FileServer(http.Dir("static")))
