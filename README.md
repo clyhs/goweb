@@ -10,4 +10,4 @@ clean:
 	@rm -rf controller/controller
 
 build:
-#	@cd controller && godep go build -a -tags "netgo static_build" -installsuffix netgo
+	@cd controller && godep go build -a -tags "netgo static_build" -installsuffix netgo
