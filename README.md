@@ -5,3 +5,9 @@
 ### 用到的第三方技术
 * xorm
 * goconfig
+### 编译
+clean:
+	@rm -rf controller/controller
+
+build:
+#	@cd controller && godep go build -a -tags "netgo static_build" -installsuffix netgo
