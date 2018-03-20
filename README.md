@@ -11,3 +11,6 @@ clean:
 
 build:
 	@cd controller && godep go build -a -tags "netgo static_build" -installsuffix netgo
+### 启动
+* 默认端口 8070
+* 启动命令 ./controller server
