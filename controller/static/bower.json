@@ -1,12 +1,12 @@
 {
-  "name": "helloweb",
+  "name": "goweb",
   "description": "",
   "main": "gulpfile.js",
   "authors": [
     "clyhs <clygd@126.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/clyhs/helloweb",
+  "homepage": "https://github.com/clyhs/goweb",
   "private": true,
   "ignore": [
     "**/.*",
@@ -14,5 +14,21 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-base64": "^2.0.5",
+    "angular-jwt": "^0.1.9",
+    "angular-mocks": "^1.6.9",
+    "angular-resource": "^1.6.9",
+    "angular-sanitize": "^1.6.9",
+    "angular-selectize2": "^3.0.1",
+    "angular-semantic-ui": "^0.0.3",
+    "d3": "^4.13.0",
+    "jquery-tablesort": "^0.0.11",
+    "microplugin": "^0.0.3",
+    "moment": "^2.21.0",
+    "nvd3": "^1.8.6",
+    "oboe": "^2.1.4",
+    "angular-ui-router": "ui-router#^1.0.15"
+  }
 }

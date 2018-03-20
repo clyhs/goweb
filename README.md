@@ -11,6 +11,9 @@ clean:
 
 build:
 	@cd controller && godep go build -a -tags "netgo static_build" -installsuffix netgo
+### 安装js
+* bower install angular-base64 --save --allow-root
+* ...
 ### 启动
 * 默认端口 8070
 * 启动命令 ./controller server
