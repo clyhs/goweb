@@ -4,12 +4,18 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     ngAnnotate = require('gulp-ng-annotate'),
-    inject = require('gulp-inject-string')
+    sourceFiles = [
+      'src/angularJwt/angularJwt.prefix',
+      'src/angularJwt/angularJwt.js',
+      'src/angularJwt/directives/**/*.js',
+      'src/angularJwt/filters/**/*.js',
+      'src/angularJwt/services/**/*.js',
+      'src/angularJwt/angularJwt.suffix'
+    ];
 
 gulp.task('build', function() {
-  gulp.src('src/angularJwt/**/*.js')
+  gulp.src(sourceFiles)
     .pipe(concat('angular-jwt.js'))
-    .pipe(inject.wrap('(function() {\n\n\n', '\n}());'))
     .pipe(ngAnnotate())
     .pipe(gulp.dest('./dist/'))
     .pipe(uglify())

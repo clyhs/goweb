@@ -44,7 +44,7 @@
     "commit": "c73ecc2a9da1eda2d394badc10d9b36e12f04a4e"
   },
   "_source": "https://github.com/angularify/angular-semantic-ui.git",
-  "_target": "^0.0.3",
+  "_target": "0.0.3",
   "_originalSource": "angular-semantic-ui",
   "_direct": true
 }

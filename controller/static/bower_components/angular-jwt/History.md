@@ -1,32 +1,3 @@
-0.1.9 / 2017-01-17
-==================
-
-* Add support for RegEx in `whiteListedDomains` array
-
-0.1.8 / 2016-11-10
-==================
- 
- * Add `isAuthenticated` function to `authManager`
-
-0.1.7 / 2016-10-21
-==================
-
-  * Add `invokeRedirector` method to `authManager` to properly handle annotated `unauthenticatedRedirector` functions
-  * Expose `getToken` and `redirect` from `authManager`
-  * Clean up `gulpfile.js`
-
-0.1.6 / 2016-10-13
-==================
-
-  * Add support for `requiresLogin` to be set in route configuration to protect client-side routes
-  * Add event `tokenHasExpired` to allow for custom behavior when a token is expired on page refresh
-
-0.1.0 / 2016-08-15
-==================
-
-  * Add authManager service
-  * Add jwtOptionsProvider to share config between services
-  * Add instructions for whitelisting domains
 
 0.0.9 / 2015-06-02
 ==================

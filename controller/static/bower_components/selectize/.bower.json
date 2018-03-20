@@ -54,6 +54,6 @@
     "commit": "47e048662d865c4f1ea3b2337de5e06e92fd9530"
   },
   "_source": "https://github.com/selectize/selectize.js.git",
-  "_target": ">=0.12.1",
+  "_target": ">=0.9.0",
   "_originalSource": "selectize"
 }
