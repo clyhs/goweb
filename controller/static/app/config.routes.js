@@ -7,9 +7,7 @@
 
     getRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-    function getRoutes($stateProvider, $urlRouterProvider) {
-	
-	    
+    function getRoutes($stateProvider, $urlRouterProvider) {	
         $stateProvider
             .state('error', {
                 templateUrl: 'app/error/error.html',
@@ -17,7 +15,7 @@
             });
         $urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');
-            $state.go('dashboard.containers');
+            $state.go('dashboard.main');
         });
     }
 })();

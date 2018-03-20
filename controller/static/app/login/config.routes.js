@@ -14,7 +14,7 @@
 	            templateUrl: 'app/login/login.html',
 	            controller: 'LoginController',
 	            controllerAs: 'vm',
-                authenticate: false
+                    authenticate: false
 		})
                 .state('403', {
                     url: '/403',

@@ -1,6 +1,6 @@
 {
-  "name": "shipyard-ui",
-  "version": "3.0.0",
+  "name": "goweb",
+  "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
@@ -41,11 +41,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tombee/shipyard-ui"
+    "url": "https://github.com/clyhs/goweb"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tombee/shipyard-ui/issues"
+    "url": "https://github.com/clyhs/goweb/issues"
   }
 }

@@ -1,10 +1,10 @@
 {
-  "name": "shipyard-ui",
-  "version": "3.0.0",
-  "homepage": "https://github.com/tombee/shipyard-ui",
+  "name": "goweb",
+  "version": "1.0.0",
+  "homepage": "https://github.com/clyhs/goweb",
   "authors": [
-    "Evan Hazlett",
-    "Tom Barlow <tomwbarlow@gmail.com>"
+    "clyhs",
+    "clyhs<clygd@126.com>"
   ],
   "license": "MIT",
   "ignore": [

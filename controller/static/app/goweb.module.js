@@ -4,8 +4,10 @@
     angular
         .module('goweb', [
                 'goweb.core',
-				'goweb.services',
+                'goweb.services',
                 'goweb.layout',
+                'goweb.login',
+				'goweb.main',
                 'goweb.filters',
                 'angular-jwt',
                 'base64',

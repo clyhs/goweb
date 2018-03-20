@@ -9,8 +9,8 @@
 	function LoginController(AuthService, $state) {
             var vm = this;
             vm.error = "";
-            vm.username = "admin";
-            vm.password = "shipyard";
+            vm.username = "";
+            vm.password = "";
             vm.login = login;
 
             function isValid() {
@@ -18,9 +18,9 @@
             }
 
             function login() {
-                //if (!isValid()) {
-                    //return;
-                //}
+                if (!isValid()) {
+                    return;
+                }
                 vm.error = "";
                 AuthService.login({
                     username: vm.username, 
