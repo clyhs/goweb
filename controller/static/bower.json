@@ -29,6 +29,7 @@
     "moment": "^2.21.0",
     "nvd3": "^1.8.6",
     "oboe": "^2.1.4",
-    "angular-ui-router": "ui-router#^1.0.15"
+    "angular": "^1.6.9",
+    "angular-ui-router": "^1.0.15"
   }
 }
