@@ -3,7 +3,7 @@ package models
 import (
 	"errors"
 
-	"github.com/clyhs/helloweb/controller/setting"
+	"github.com/clyhs/goweb/controller/setting"
 	"github.com/go-xorm/xorm"
 )
 

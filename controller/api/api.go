@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/clyhs/helloweb/controller/models"
-	"github.com/clyhs/helloweb/controller/setting"
+	"github.com/clyhs/goweb/controller/models"
+	"github.com/clyhs/goweb/controller/setting"
 	"github.com/gorilla/context"
 	"github.com/gorilla/mux"
 	"github.com/mailgun/oxy/forward"

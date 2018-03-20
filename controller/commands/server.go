@@ -2,7 +2,7 @@ package commands
 
 import (
 	log "github.com/Sirupsen/logrus"
-	"github.com/clyhs/helloweb/controller/api"
+	"github.com/clyhs/goweb/controller/api"
 	"github.com/codegangsta/cli"
 )
 

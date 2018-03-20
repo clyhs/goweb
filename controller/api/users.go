@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/clyhs/helloweb/controller/models"
+	"github.com/clyhs/goweb/controller/models"
 )
 
 func (a *Api) User(w http.ResponseWriter, r *http.Request) {

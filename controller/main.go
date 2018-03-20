@@ -4,7 +4,7 @@ import (
 	"os"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/clyhs/helloweb/controller/commands"
+	"github.com/clyhs/goweb/controller/commands"
 	"github.com/codegangsta/cli"
 )
 
