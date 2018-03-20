@@ -3,12 +3,12 @@
  * http://github.com/semantic-org/semantic-ui/
  *
  *
+ * Copyright 2014 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
-
-;(function ($, window, document, undefined) {
+;(function ( $, window, document, undefined ) {
 
 $.site = $.fn.site = function(parameters) {
   var
@@ -81,7 +81,7 @@ $.site = $.fn.site = function(parameters) {
       requestAnimationFrame: function() {
         module.debug('Normalizing requestAnimationFrame');
         if(window.requestAnimationFrame === undefined) {
-          module.debug('RequestAnimationFrame not available, normalizing event');
+          module.debug('RequestAnimationFrame not available, normailizing event');
           window.requestAnimationFrame = window.requestAnimationFrame
             || window.mozRequestAnimationFrame
             || window.webkitRequestAnimationFrame
@@ -320,7 +320,7 @@ $.site = $.fn.site = function(parameters) {
           });
         }
         clearTimeout(module.performance.timer);
-        module.performance.timer = setTimeout(module.performance.display, 500);
+        module.performance.timer = setTimeout(module.performance.display, 100);
       },
       display: function() {
         var
@@ -433,7 +433,7 @@ $.site.settings = {
   },
 
   debug       : false,
-  verbose     : false,
+  verbose     : true,
   performance : true,
 
   modules: [
@@ -442,7 +442,6 @@ $.site.settings = {
     'checkbox',
     'dimmer',
     'dropdown',
-    'embed',
     'form',
     'modal',
     'nag',
@@ -454,6 +453,7 @@ $.site.settings = {
     'sticky',
     'tab',
     'transition',
+    'video',
     'visit',
     'visibility'
   ],
@@ -484,4 +484,4 @@ $.extend($.expr[ ":" ], {
 });
 
 
-})( jQuery, window, document );
+})( jQuery, window , document );

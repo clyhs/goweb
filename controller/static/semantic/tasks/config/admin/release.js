@@ -68,11 +68,9 @@ module.exports = {
     'card',
     'checkbox',
     'comment',
-    'container',
     'dimmer',
     'divider',
     'dropdown',
-    'embed',
     'feed',
     'flag',
     'form',
@@ -106,6 +104,7 @@ module.exports = {
     'tab',
     'table',
     'transition',
+    'video',
     'visibility'
   ]
 };

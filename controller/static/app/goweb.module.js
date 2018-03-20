@@ -3,15 +3,14 @@
 
     angular
         .module('goweb', [
-		        'goweb.core',
-		        'goweb.layout',
-				'goweb.login',
+                'goweb.core',
+				'goweb.services',
+                'goweb.layout',
                 'goweb.filters',
                 'angular-jwt',
                 'base64',
                 'selectize',
                 'ui.router'
-				
         ]);
 
 })();

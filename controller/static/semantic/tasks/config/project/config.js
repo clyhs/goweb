@@ -92,10 +92,11 @@ module.exports = {
 
     config.paths.assets = {
       source       : '../../themes', // source asset path is always the same
-      uncompressed : './' + path.relative(config.paths.output.uncompressed, config.paths.output.themes).replace(/\\/g, '/'),
-      compressed   : './' + path.relative(config.paths.output.compressed, config.paths.output.themes).replace(/\\/g, '/'),
-      packaged     : './' + path.relative(config.paths.output.packaged, config.paths.output.themes).replace(/\\/g, '/')
+      uncompressed : path.relative(config.paths.output.uncompressed, config.paths.output.themes).replace(/\\/g,'/'),
+      compressed   : path.relative(config.paths.output.compressed, config.paths.output.themes).replace(/\\/g,'/'),
+      packaged     : path.relative(config.paths.output.packaged, config.paths.output.themes).replace(/\\/g,'/')
     };
+
 
     /*--------------
        Permission
@@ -116,13 +117,6 @@ module.exports = {
 
     if(!config.globs) {
       config.globs = {};
-    }
-
-    // remove duplicates from component array
-    if(config.components instanceof Array) {
-      config.components = config.components.filter(function(component, index) {
-        return config.components.indexOf(component) == index;
-      });
     }
 
     // takes component object and creates file glob matching selected components

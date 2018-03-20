@@ -3,6 +3,7 @@
  * http://github.com/semantic-org/semantic-ui/
  *
  *
+ * Copyright 2014 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -23,57 +24,38 @@
 *******************************/
 
 .ui.rating {
-  display: inline-flex;
-  white-space: @whiteSpace;
+  display: @display;
   vertical-align: @verticalAlign;
 }
 .ui.rating:last-child {
   margin-right: 0em;
 }
 
+.ui.rating:before {
+  display: block;
+  content: '';
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+
 /* Icon */
 .ui.rating .icon {
-  padding: 0em;
+  cursor: pointer;
+
   margin: 0em;
+  width: @iconWidth;
+  height: auto;
   text-align: center;
+  padding: 0em;
   font-weight: normal;
   font-style: normal;
-  flex: 1 0 auto;
-  cursor: @iconCursor;
-  width: @iconWidth;
-  height: @iconHeight;
-  transition: @iconTransition;
 }
 
 
 /*******************************
              Types
 *******************************/
-
-
-/*-------------------
-      Standard
---------------------*/
-
-/* Inactive Icon */
-.ui.rating .icon {
-  background: @inactiveBackground;
-  color: @inactiveColor;
-}
-
-/* Active Icon */
-.ui.rating .active.icon {
-  background: @activeBackground;
-  color: @activeColor;
-}
-
-/* Selected Icon */
-.ui.rating .icon.selected,
-.ui.rating .icon.selected.active {
-  background: @selectedBackground;
-  color: @selectedColor;
-}
-
 
 /*-------------------
         Star
@@ -82,26 +64,30 @@
 /* Inactive */
 .ui.star.rating .icon {
   width: @starIconWidth;
-  height: @starIconHeight;
-  background: @starInactiveBackground;
   color: @starInactiveColor;
-  text-shadow: @starInactiveTextShadow;
 }
 
 /* Active Star */
 .ui.star.rating .active.icon {
-  background: @starActiveBackground !important;
   color: @starActiveColor !important;
-  text-shadow: @starActiveTextShadow !important;
+  text-shadow: @starActiveShadow;
 }
 
 /* Selected Star */
 .ui.star.rating .icon.selected,
 .ui.star.rating .icon.selected.active {
-  background: @starSelectedBackground !important;
   color: @starSelectedColor !important;
-  text-shadow: @starSelectedTextShadow !important;
 }
+
+.ui.star.rating.partial {
+  position: relative;
+  z-index: 1;
+}
+.ui.star.rating.partial:before {
+  position: absolute;
+  z-index: -1;
+}
+
 
 
 /*-------------------
@@ -110,31 +96,43 @@
 
 .ui.heart.rating .icon {
   width: @heartIconWidth;
-  height: @heartIconHeight;
-  background: @heartInactiveBackground;
   color: @heartInactiveColor;
-  text-shadow: @heartInactiveTextShadow !important;
 }
 
 /* Active Heart */
 .ui.heart.rating .active.icon {
-  background: @heartActiveBackground !important;
   color: @heartActiveColor !important;
-  text-shadow: @heartActiveTextShadow !important;
+  text-shadow: @heartActiveShadow;
 }
 
 /* Selected Heart */
 .ui.heart.rating .icon.selected,
 .ui.heart.rating .icon.selected.active {
-  background: @heartSelectedBackground !important;
   color: @heartSelectedColor !important;
-  text-shadow: @heartSelectedTextShadow !important;
 }
 
 
 /*******************************
              States
 *******************************/
+
+
+/* Inactive Icon */
+.ui.rating .icon {
+  color: @inactiveColor;
+}
+
+/* Active Icon */
+.ui.rating .active.icon {
+  color: @activeColor;
+}
+
+/* Selected Icon */
+.ui.rating .icon.selected,
+.ui.rating .icon.selected.active {
+  color: @hoverColor;
+}
+
 
 /*-------------------
        Disabled
@@ -147,12 +145,12 @@
 
 
 /*-------------------
-   User Interactive
+     Interacting (Active)
 --------------------*/
 
 /* Selected Rating */
 .ui.rating.selected .active.icon {
-  opacity: @interactiveActiveIconOpacity;
+  opacity: @interactiveIconOpacity;
 }
 .ui.rating.selected .icon.selected,
 .ui.rating .icon.selected {
@@ -165,25 +163,25 @@
           Variations
 *******************************/
 
-.ui.mini.rating {
+.ui.mini.rating .icon {
   font-size: @mini;
 }
-.ui.tiny.rating {
+.ui.tiny.rating .icon {
   font-size: @tiny;
 }
-.ui.small.rating {
+.ui.small.rating .icon {
   font-size: @small;
 }
-.ui.rating {
+.ui.rating .icon {
   font-size: @medium;
 }
-.ui.large.rating {
+.ui.large.rating .icon {
   font-size: @large;
 }
-.ui.huge.rating {
+.ui.huge.rating .icon {
   font-size: @huge;
 }
-.ui.massive.rating {
+.ui.massive.rating .icon {
   font-size: @massive;
 }
 

@@ -1,7 +1,6 @@
 //! moment.js locale configuration
-//! locale : Welsh [cy]
-//! author : Robert Allen : https://github.com/robgallen
-//! author : https://github.com/ryangreaves
+//! locale : Welsh (cy)
+//! author : Robert Allen
 
 import moment from '../moment';
 
@@ -11,7 +10,6 @@ export default moment.defineLocale('cy', {
     weekdays: 'Dydd Sul_Dydd Llun_Dydd Mawrth_Dydd Mercher_Dydd Iau_Dydd Gwener_Dydd Sadwrn'.split('_'),
     weekdaysShort: 'Sul_Llun_Maw_Mer_Iau_Gwe_Sad'.split('_'),
     weekdaysMin: 'Su_Ll_Ma_Me_Ia_Gw_Sa'.split('_'),
-    weekdaysParseExact : true,
     // time formats are the same as en-gb
     longDateFormat: {
         LT: 'HH:mm',
@@ -33,7 +31,6 @@ export default moment.defineLocale('cy', {
         future: 'mewn %s',
         past: '%s yn ôl',
         s: 'ychydig eiliadau',
-        ss: '%d eiliad',
         m: 'munud',
         mm: '%d munud',
         h: 'awr',
@@ -45,7 +42,7 @@ export default moment.defineLocale('cy', {
         y: 'blwyddyn',
         yy: '%d flynedd'
     },
-    dayOfMonthOrdinalParse: /\d{1,2}(fed|ain|af|il|ydd|ed|eg)/,
+    ordinalParse: /\d{1,2}(fed|ain|af|il|ydd|ed|eg)/,
     // traditional ordinal numbers above 31 are not commonly used in colloquial Welsh
     ordinal: function (number) {
         var b = number,

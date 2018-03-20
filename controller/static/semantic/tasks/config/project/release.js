@@ -5,7 +5,7 @@
 var
   requireDotFile = require('require-dot-file'),
   config,
-  npmPackage,
+  package,
   version
 ;
 
@@ -15,28 +15,24 @@ var
 *******************************/
 
 try {
-  config = requireDotFile('semantic.json');
-}
-catch(error) {}
 
+  config   = requireDotFile('semantic.json');
+  package  = require('../../../package.json');
 
-try {
-  npmPackage = require('../../../package.json');
+  // looks for version in config or package.json (whichever is available)
+  version = (config && config.version !== undefined)
+    ? config.version
+    : package.version
+  ;
+
 }
+
 catch(error) {
   // generate fake package
-  npmPackage = {
-    name: 'Unknown',
+  package = {
     version: 'x.x'
   };
 }
-
-// looks for version in config or package.json (whichever is available)
-version = (npmPackage && npmPackage.version !== undefined && npmPackage.name == 'semantic-ui')
-  ? npmPackage.version
-  : config.version
-;
-
 
 /*******************************
              Export
@@ -60,6 +56,6 @@ module.exports = {
     + ' *' + '\n'
     + ' */' + '\n',
 
-  version    : version
+  version    : package.version
 
 };

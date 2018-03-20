@@ -1,5 +1,5 @@
 //! moment.js locale configuration
-//! locale : Bulgarian [bg]
+//! locale : bulgarian (bg)
 //! author : Krasen Borisov : https://github.com/kraz
 
 import moment from '../moment';
@@ -25,15 +25,15 @@ export default moment.defineLocale('bg', {
         lastDay : '[Вчера в] LT',
         lastWeek : function () {
             switch (this.day()) {
-                case 0:
-                case 3:
-                case 6:
-                    return '[В изминалата] dddd [в] LT';
-                case 1:
-                case 2:
-                case 4:
-                case 5:
-                    return '[В изминалия] dddd [в] LT';
+            case 0:
+            case 3:
+            case 6:
+                return '[В изминалата] dddd [в] LT';
+            case 1:
+            case 2:
+            case 4:
+            case 5:
+                return '[В изминалия] dddd [в] LT';
             }
         },
         sameElse : 'L'
@@ -42,7 +42,6 @@ export default moment.defineLocale('bg', {
         future : 'след %s',
         past : 'преди %s',
         s : 'няколко секунди',
-        ss : '%d секунди',
         m : 'минута',
         mm : '%d минути',
         h : 'час',
@@ -54,7 +53,7 @@ export default moment.defineLocale('bg', {
         y : 'година',
         yy : '%d години'
     },
-    dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
+    ordinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
     ordinal : function (number) {
         var lastDigit = number % 10,
             last2Digits = number % 100;

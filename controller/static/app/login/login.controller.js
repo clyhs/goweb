@@ -5,12 +5,12 @@
 		.module('goweb.login')
 		.controller('LoginController', LoginController);
 
-    LoginController.$inject = [/*'AuthService',*/ '$state'];
-	function LoginController(/*AuthService,*/ $state) {
+    LoginController.$inject = ['AuthService', '$state'];
+	function LoginController(AuthService, $state) {
             var vm = this;
             vm.error = "";
             vm.username = "admin";
-            vm.password = "123456";
+            vm.password = "shipyard";
             vm.login = login;
 
             function isValid() {
@@ -22,7 +22,6 @@
                     //return;
                 //}
                 vm.error = "";
-				/*
                 AuthService.login({
                     username: vm.username, 
                     password: vm.password
@@ -30,7 +29,7 @@
                     $state.transitionTo('dashboard.containers');
                 }, function(response) {
                     vm.error = response.data;
-                });*/
+                });
             }
         }
 })();

@@ -19,6 +19,7 @@ var
 ;
 
 if(!oAuth) {
+  console.log('here');
   console.error('Must add oauth token for GitHub in tasks/config/admin/oauth.js');
 }
 

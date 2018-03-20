@@ -1,8 +1,8 @@
 //! moment.js locale configuration
-//! locale : Albanian [sq]
+//! locale : Albanian (sq)
 //! author : Flakërim Ismani : https://github.com/flakerimi
-//! author : Menelion Elensúle : https://github.com/Oire
-//! author : Oerd Cukalla : https://github.com/oerd
+//! author: Menelion Elensúle: https://github.com/Oire (tests)
+//! author : Oerd Cukalla : https://github.com/oerd (fixes)
 
 import moment from '../moment';
 
@@ -12,7 +12,6 @@ export default moment.defineLocale('sq', {
     weekdays : 'E Diel_E Hënë_E Martë_E Mërkurë_E Enjte_E Premte_E Shtunë'.split('_'),
     weekdaysShort : 'Die_Hën_Mar_Mër_Enj_Pre_Sht'.split('_'),
     weekdaysMin : 'D_H_Ma_Më_E_P_Sh'.split('_'),
-    weekdaysParseExact : true,
     meridiemParse: /PD|MD/,
     isPM: function (input) {
         return input.charAt(0) === 'M';
@@ -40,7 +39,6 @@ export default moment.defineLocale('sq', {
         future : 'në %s',
         past : '%s më parë',
         s : 'disa sekonda',
-        ss : '%d sekonda',
         m : 'një minutë',
         mm : '%d minuta',
         h : 'një orë',
@@ -52,7 +50,7 @@ export default moment.defineLocale('sq', {
         y : 'një vit',
         yy : '%d vite'
     },
-    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinalParse: /\d{1,2}\./,
     ordinal : '%d.',
     week : {
         dow : 1, // Monday is the first day of the week.

@@ -15,7 +15,6 @@
     "commit": "0356847ec5a3e73fc875bddf955fd05837eff34e"
   },
   "_source": "https://github.com/machineboy2045/angular-selectize.git",
-  "_target": "1.2.3",
-  "_originalSource": "angular-selectize2",
-  "_direct": true
+  "_target": "~1.2.1",
+  "_originalSource": "angular-selectize2"
 }

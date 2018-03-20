@@ -1,5 +1,5 @@
 //! moment.js locale configuration
-//! locale : Romanian [ro]
+//! locale : romanian (ro)
 //! author : Vlad Gurdiga : https://github.com/gurdiga
 //! author : Valentin Agachi : https://github.com/avaly
 
@@ -7,7 +7,6 @@ import moment from '../moment';
 
 function relativeTimeWithPlural(number, withoutSuffix, key) {
     var format = {
-            'ss': 'secunde',
             'mm': 'minute',
             'hh': 'ore',
             'dd': 'zile',
@@ -24,7 +23,6 @@ function relativeTimeWithPlural(number, withoutSuffix, key) {
 export default moment.defineLocale('ro', {
     months : 'ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie'.split('_'),
     monthsShort : 'ian._febr._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.'.split('_'),
-    monthsParseExact: true,
     weekdays : 'duminică_luni_marți_miercuri_joi_vineri_sâmbătă'.split('_'),
     weekdaysShort : 'Dum_Lun_Mar_Mie_Joi_Vin_Sâm'.split('_'),
     weekdaysMin : 'Du_Lu_Ma_Mi_Jo_Vi_Sâ'.split('_'),
@@ -48,7 +46,6 @@ export default moment.defineLocale('ro', {
         future : 'peste %s',
         past : '%s în urmă',
         s : 'câteva secunde',
-        ss : relativeTimeWithPlural,
         m : 'un minut',
         mm : relativeTimeWithPlural,
         h : 'o oră',

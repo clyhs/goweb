@@ -1,6 +1,5 @@
 //! moment.js locale configuration
-//! locale  :  Arabic (Tunisia) [ar-tn]
-//! author : Nader Toukabri : https://github.com/naderio
+//! locale  : Tunisian Arabic (ar-tn)
 
 import moment from '../moment';
 
@@ -10,7 +9,6 @@ export default moment.defineLocale('ar-tn', {
     weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
     weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
     weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
-    weekdaysParseExact : true,
     longDateFormat: {
         LT: 'HH:mm',
         LTS: 'HH:mm:ss',
@@ -31,7 +29,6 @@ export default moment.defineLocale('ar-tn', {
         future: 'في %s',
         past: 'منذ %s',
         s: 'ثوان',
-        ss : '%d ثانية',
         m: 'دقيقة',
         mm: '%d دقائق',
         h: 'ساعة',

@@ -10,11 +10,7 @@ function defaultParsingFlags() {
         invalidMonth    : null,
         invalidFormat   : false,
         userInvalidated : false,
-        iso             : false,
-        parsedDateParts : [],
-        meridiem        : null,
-        rfc2822         : false,
-        weekdayMismatch : false
+        iso             : false
     };
 }
 

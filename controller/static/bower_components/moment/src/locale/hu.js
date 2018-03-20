@@ -1,5 +1,5 @@
 //! moment.js locale configuration
-//! locale : Hungarian [hu]
+//! locale : hungarian (hu)
 //! author : Adam Brunner : https://github.com/adambrunner
 
 import moment from '../moment';
@@ -9,30 +9,28 @@ function translate(number, withoutSuffix, key, isFuture) {
     var num = number,
         suffix;
     switch (key) {
-        case 's':
-            return (isFuture || withoutSuffix) ? 'néhány másodperc' : 'néhány másodperce';
-        case 'ss':
-            return num + (isFuture || withoutSuffix) ? ' másodperc' : ' másodperce';
-        case 'm':
-            return 'egy' + (isFuture || withoutSuffix ? ' perc' : ' perce');
-        case 'mm':
-            return num + (isFuture || withoutSuffix ? ' perc' : ' perce');
-        case 'h':
-            return 'egy' + (isFuture || withoutSuffix ? ' óra' : ' órája');
-        case 'hh':
-            return num + (isFuture || withoutSuffix ? ' óra' : ' órája');
-        case 'd':
-            return 'egy' + (isFuture || withoutSuffix ? ' nap' : ' napja');
-        case 'dd':
-            return num + (isFuture || withoutSuffix ? ' nap' : ' napja');
-        case 'M':
-            return 'egy' + (isFuture || withoutSuffix ? ' hónap' : ' hónapja');
-        case 'MM':
-            return num + (isFuture || withoutSuffix ? ' hónap' : ' hónapja');
-        case 'y':
-            return 'egy' + (isFuture || withoutSuffix ? ' év' : ' éve');
-        case 'yy':
-            return num + (isFuture || withoutSuffix ? ' év' : ' éve');
+    case 's':
+        return (isFuture || withoutSuffix) ? 'néhány másodperc' : 'néhány másodperce';
+    case 'm':
+        return 'egy' + (isFuture || withoutSuffix ? ' perc' : ' perce');
+    case 'mm':
+        return num + (isFuture || withoutSuffix ? ' perc' : ' perce');
+    case 'h':
+        return 'egy' + (isFuture || withoutSuffix ? ' óra' : ' órája');
+    case 'hh':
+        return num + (isFuture || withoutSuffix ? ' óra' : ' órája');
+    case 'd':
+        return 'egy' + (isFuture || withoutSuffix ? ' nap' : ' napja');
+    case 'dd':
+        return num + (isFuture || withoutSuffix ? ' nap' : ' napja');
+    case 'M':
+        return 'egy' + (isFuture || withoutSuffix ? ' hónap' : ' hónapja');
+    case 'MM':
+        return num + (isFuture || withoutSuffix ? ' hónap' : ' hónapja');
+    case 'y':
+        return 'egy' + (isFuture || withoutSuffix ? ' év' : ' éve');
+    case 'yy':
+        return num + (isFuture || withoutSuffix ? ' év' : ' éve');
     }
     return '';
 }
@@ -81,7 +79,6 @@ export default moment.defineLocale('hu', {
         future : '%s múlva',
         past : '%s',
         s : translate,
-        ss : translate,
         m : translate,
         mm : translate,
         h : translate,
@@ -93,11 +90,11 @@ export default moment.defineLocale('hu', {
         y : translate,
         yy : translate
     },
-    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinalParse: /\d{1,2}\./,
     ordinal : '%d.',
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 4  // The week that contains Jan 4th is the first week of the year.
+        doy : 7  // The week that contains Jan 1st is the first week of the year.
     }
 });
 

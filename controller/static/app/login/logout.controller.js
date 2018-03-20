@@ -5,10 +5,10 @@
 		.module('goweb.login')
 		.controller('LogoutController', LogoutController);
 
-    LogoutController.$inject = [/*'AuthService', */'$state'];
-	function LogoutController(/*AuthService,*/ $state) {
+    LogoutController.$inject = ['AuthService', '$state'];
+	function LogoutController(AuthService, $state) {
             var vm = this;
-            //AuthService.logout();
+            AuthService.logout();
             $state.transitionTo('login');
         }
 })();

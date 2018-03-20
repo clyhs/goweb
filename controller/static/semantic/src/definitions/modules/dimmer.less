@@ -3,6 +3,7 @@
  * http://github.com/semantic-org/semantic-ui/
  *
  *
+ * Copyright 2014 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -21,7 +22,7 @@
             Dimmer
 *******************************/
 
-.dimmable:not(.body) {
+.dimmable {
   position: @dimmablePosition;
 }
 
@@ -37,7 +38,7 @@
   text-align: @textAlign;
   vertical-align: @verticalAlign;
 
-  background-color: @backgroundColor;
+  background: @background;
   opacity: @hiddenOpacity;
   line-height: @lineHeight;
 
@@ -57,7 +58,7 @@
   display: @contentDisplay;
   user-select: text;
 }
-.ui.dimmer > .content > * {
+.ui.dimmer > .content > div {
   display: @contentChildDisplay;
   vertical-align: @verticalAlign;
   color: @textColor;
@@ -109,30 +110,19 @@ body.animating.in.dimmable,
 body.dimmed.dimmable {
   overflow: hidden;
 }
-
 body.dimmable > .dimmer {
   position: fixed;
 }
 
-/*--------------
-    Blurring
----------------*/
-
-.blurring.dimmable > :not(.dimmer) {
-  filter: @blurredStartFilter;
-  transition: @blurredTransition;
+/*
+body.dimmable > :not(.dimmer) {
+  filter: @elementStartFilter;
 }
-.blurring.dimmed.dimmable > :not(.dimmer) {
-  filter: @blurredEndFilter;
+body.dimmed.dimmable > :not(.dimmer) {
+  filter: @elementEndFilter;
+  transition: @elementTransition;
 }
-
-/* Dimmer Color */
-.blurring.dimmable > .dimmer {
-  background-color: @blurredBackgroundColor;
-}
-.blurring.dimmable > .inverted.dimmer {
-  background-color: @blurredInvertedBackgroundColor;
-}
+*/
 
 /*--------------
     Aligned
@@ -150,7 +140,7 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .ui.inverted.dimmer {
-  background-color: @invertedBackgroundColor;
+  background: @invertedBackground;
 }
 .ui.inverted.dimmer > .content > * {
   color: @textColor;
@@ -168,22 +158,22 @@ body.dimmable > .dimmer {
   width: 0%;
   height: 0%;
   z-index: -100;
-  background-color: @simpleStartBackgroundColor;
+  background-color: @simpleStartBackground;
 }
 .dimmed.dimmable > .ui.simple.dimmer {
   overflow: visible;
   opacity: 1;
   width: 100%;
   height: 100%;
-  background-color: @simpleEndBackgroundColor;
+  background: @simpleEndBackground;
   z-index: @simpleZIndex;
 }
 
 .ui.simple.inverted.dimmer {
-  background-color: @simpleInvertedStartBackgroundColor;
+  background: @simpleInvertedStartBackground;
 }
 .dimmed.dimmable > .ui.simple.inverted.dimmer {
-  background-color: @simpleInvertedEndBackgroundColor;
+  background: @simpleInvertedEndBackground;
 }
 
 .loadUIOverrides();

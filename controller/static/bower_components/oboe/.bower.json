@@ -1,6 +1,6 @@
 {
   "name": "oboe",
-  "version": "2.1.4",
+  "version": "2.1.3",
   "main": "dist/oboe-browser.js",
   "ignore": [
     "**/.*",
@@ -16,14 +16,13 @@
     "test"
   ],
   "homepage": "https://github.com/jimhigson/oboe.js",
-  "_release": "2.1.4",
+  "_release": "2.1.3",
   "_resolution": {
     "type": "version",
-    "tag": "v2.1.4",
-    "commit": "71e6357fb840bb7ee69bb610b3db2112de5f775c"
+    "tag": "v2.1.3",
+    "commit": "537e9e75b61f75d2d402632505ff3c9a12dd254f"
   },
   "_source": "https://github.com/jimhigson/oboe.js.git",
-  "_target": "^2.1.4",
-  "_originalSource": "oboe",
-  "_direct": true
+  "_target": "~2.1.1",
+  "_originalSource": "oboe"
 }

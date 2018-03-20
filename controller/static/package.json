@@ -1,41 +1,51 @@
 {
-  "name": "goweb",
-  "version": "1.0.0",
+  "name": "shipyard-ui",
+  "version": "3.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "dependencies": {
+    "better-console": "^0.2.4",
+    "del": "^1.1.1",
+    "extend": "^2.0.0",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-bower": "^0.0.10",
+    "gulp-chmod": "^1.2.0",
+    "gulp-clone": "^1.0.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-copy": "^0.0.2",
+    "gulp-flatten": "^0.0.4",
+    "gulp-header": "^1.2.2",
+    "gulp-help": "^1.3.4",
+    "gulp-if": "^1.2.5",
+    "gulp-less": "^3.0.2",
+    "gulp-minify-css": "^0.5.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-print": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-rtlcss": "^0.1.4",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.4",
+    "gulp-watch": "^4.2.2",
+    "require-dot-file": "^0.4.0",
+    "semantic-ui": "^1.11.6"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tombee/shipyard-ui"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "better-console": "^1.0.0",
-    "del": "^2.2.2",
-    "extend": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-bower": "0.0.13",
-    "gulp-chmod": "^2.0.0",
-    "gulp-clone": "^1.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-copy": "^1.0.0",
-    "gulp-flatten": "^0.3.1",
-    "gulp-header": "^1.8.8",
-    "gulp-help": "^1.6.1",
-    "gulp-if": "^2.0.2",
-    "gulp-less": "^3.3.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-print": "^2.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-rtlcss": "^1.0.0",
-    "gulp-uglify": "^2.1.2",
-    "gulp-util": "^3.0.8",
-    "gulp-watch": "^4.3.11",
-    "require-dot-file": "^0.4.0",
-    "semantic-ui": "^2.2.10"
+  "bugs": {
+    "url": "https://github.com/tombee/shipyard-ui/issues"
   }
 }

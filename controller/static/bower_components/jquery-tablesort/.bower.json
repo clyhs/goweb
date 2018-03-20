@@ -26,7 +26,6 @@
     "commit": "bbd1a68ce69eab940e12d17ca0ef6d34a3aeb4a8"
   },
   "_source": "https://github.com/kylefox/jquery-tablesort.git",
-  "_target": "^0.0.11",
-  "_originalSource": "jquery-tablesort",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "jquery-tablesort"
 }

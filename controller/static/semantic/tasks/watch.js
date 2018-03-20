@@ -3,7 +3,7 @@
 *******************************/
 
 var
-  gulp         = require('gulp-help')(require('gulp')),
+  gulp         = require('gulp'),
 
   // node dependencies
   console      = require('better-console'),
@@ -15,7 +15,7 @@ var
   clone        = require('gulp-clone'),
   gulpif       = require('gulp-if'),
   less         = require('gulp-less'),
-  minifyCSS    = require('gulp-clean-css'),
+  minifyCSS    = require('gulp-minify-css'),
   plumber      = require('gulp-plumber'),
   print        = require('gulp-print'),
   rename       = require('gulp-rename'),
@@ -28,7 +28,7 @@ var
   config       = require('./config/user'),
 
   // task config
-  tasks        = require('./config/tasks'),
+  tasks        = require('./config/project/tasks'),
   install      = require('./config/project/install'),
 
   // shorthand
@@ -44,10 +44,7 @@ var
 
 ;
 
-// add tasks referenced using gulp.run (sub-tasks)
-if(config.rtl) {
-  require('./collections/rtl')(gulp);
-}
+// add tasks that shouldn't be exposed to end-user
 require('./collections/internal')(gulp);
 
 
@@ -59,10 +56,7 @@ module.exports = function(callback) {
     return;
   }
 
-  // check for right-to-left (RTL) language
-  if(config.rtl == 'both') {
-    gulp.start('watch-rtl');
-  }
+  // check for right-to-left language
   if(config.rtl === true || config.rtl === 'Yes') {
     gulp.start('watch-rtl');
     return;
@@ -114,7 +108,7 @@ module.exports = function(callback) {
       if(isConfig) {
         console.info('Rebuilding all UI');
         // impossible to tell which file was updated in theme.config, rebuild all
-        gulp.start('build-css');
+        gulp.start('build');
         return;
       }
       else if(isPackagedTheme) {
@@ -140,9 +134,8 @@ module.exports = function(callback) {
 
         // unified css stream
         stream = gulp.src(lessPath)
-          .pipe(plumber(settings.plumber.less))
+          .pipe(plumber())
           .pipe(less(settings.less))
-          .pipe(print(log.created))
           .pipe(replace(comments.variables.in, comments.variables.out))
           .pipe(replace(comments.license.in, comments.license.out))
           .pipe(replace(comments.large.in, comments.large.out))
@@ -177,6 +170,7 @@ module.exports = function(callback) {
             gulp.start('package compressed css');
           })
         ;
+
       }
       else {
         console.log('Cannot find UI definition at path', lessPath);
@@ -217,7 +211,7 @@ module.exports = function(callback) {
   // only copy assets that match component names (or their plural)
   gulp
     .watch([
-      source.themes   + '/**/assets/**/*.*'
+      source.themes   + '/**/assets/**/' + globs.components + '?(s).*'
     ], function(file) {
       // copy assets
       gulp.src(file.path, { base: source.themes })
